@@ -12,22 +12,22 @@ export class AppComponent {
     password: new FormControl('123'),
     confirmPassword: new FormControl('123'),
     address: new FormGroup({
-    City: new FormControl(''),
-    State: new FormControl('')
+      City: new FormControl('kartahana'),
+      State: new FormControl('Mexico')
+    })
   })
-})
-  
 
 
-LoasApiData() {
-  this.registrationForm.setValue({
-    userName: 'Beni the king',
-    password: '123',
-    confirmPassword: '123',
-    address: {
-      City: 'Kartahana',
-      State: 'Mexico'
-    }
-  })
-}
+
+  LoasApiData() {
+    this.registrationForm.setValue({
+      userName: 'Beni the king',
+      password: '123',
+      confirmPassword: '123',
+      address: {
+        City: 'Kartahana',
+        State: 'Mexico'
+      }
+    })
+  }
 }
