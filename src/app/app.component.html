@@ -1,32 +1,36 @@
 <div class="container-fluid">
   <h1> Registration Form </h1>
   <form [formGroup]="registrationForm">
-
+    {{registrationForm.value | json}}
     <div class="form-group">
-      <label>UserName</label>
-      <input type="text" class="form-control" formControlName="userName">
+      <label for="userName">UserName</label>
+      <input type="text" class="form-control" formControlName="UserName" id="UserName">
     </div>
 
     <div class="form-group">
-      <label for="">Password</label>
-      <input type="password" class="form-control" formControlName="password">
+      <label  for="Password">Password</label>
+      <input type="password" class="form-control" formControlName="Password" id="Password">
     </div>
 
     <div class="form-group">
-      <label for="">ConfirmPassword</label>
-      <input type="password" class="form-control" formControlName="confirmPassword">
+      <label for="ConfirmPassword" >ConfirmPassword</label>
+      <input type="password" class="form-control" formControlName="ConfirmPassword" id="ConfirmPassword">
     </div>
     <div formGroupName="address">
       <div class="form-group">
-        <label for="">City:</label>
-        <input type="password" class="form-control" formControlName="city">
+        <label for="City" >City:</label>
+        <input type="password" class="form-control" formControlName="City" id="City">
       </div>
       <div class="form-group">
-        <label>State:</label>
-        <input type="text" class="form-control" formControlName="state">
+        <label for="State">State:</label>
+        <input type="text" class="form-control" formControlName="State" id="State">
       </div>
       <button class="btn btn-primary" type="submit">Submit</button>
+      <br>
+      <br>
+
+      <button ((click))="LoasApiData()" class="btn btn-primary" type="button">LoadApiData</button>
     </div>
   </form>
-  {{registrationForm.value | json}}
-  </div>
+
+</div>
