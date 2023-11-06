@@ -3,7 +3,7 @@
   <form [formGroup]="registrationForm">
     {{registrationForm.value | json}}
     <div class="form-group">
-      <label for="userName">UserName</label>
+      <label for="UserName">UserName</label>
       <input type="text" class="form-control" formControlName="UserName" id="UserName">
     </div>
 
@@ -19,7 +19,7 @@
     <div formGroupName="address">
       <div class="form-group">
         <label for="City" >City:</label>
-        <input type="password" class="form-control" formControlName="City" id="City">
+        <input type="text" class="form-control" formControlName="City" id="City">
       </div>
       <div class="form-group">
         <label for="State">State:</label>
@@ -29,7 +29,7 @@
       <br>
       <br>
 
-      <button ((click))="LoasApiData()" class="btn btn-primary" type="button">LoadApiData</button>
+      <button ((click))="LoadApiData()" class="btn btn-primary" type="button">LoadApiData</button>
     </div>
   </form>
 
