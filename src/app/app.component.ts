@@ -22,8 +22,8 @@ export class AppComponent {
   LoadApiData() {
     this.registrationForm.setValue({
       UserName: 'Beni the king',
-      Password: '123',
-      ConfirmPassword: '123',
+      Password: '123456',
+      ConfirmPassword: '123456',
       address: {
         City: 'Kartahana',
         State: 'Mexico'
