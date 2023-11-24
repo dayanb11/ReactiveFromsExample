@@ -4,29 +4,29 @@
 
     <div class="form-group">
       <label>UserName</label>
-      <input type="text" class="form-control" formControlName="userName">
+      <input type="text" class="form-control" formControlName="UserName">
     </div>
 
     <div class="form-group">
       <label for="">Password</label>
-      <input type="password" class="form-control" formControlName="password">
+      <input type="password" class="form-control" formControlName="Password">
     </div>
-
     <div class="form-group">
       <label for="">ConfirmPassword</label>
-      <input type="password" class="form-control" formControlName="confirmPassword">
+      <input type="password" class="form-control" formControlName="ConfirmPassword" id="=ConfirmPassword">
     </div>
     <div formGroupName="address">
       <div class="form-group">
-        <label for="">City:</label>
-        <input type="password" class="form-control" formControlName="city">
+        <label for="City">City:</label>
+        <input type="Password" class="form-control" formControlName="City" id="City">
       </div>
       <div class="form-group">
-        <label>State:</label>
-        <input type="text" class="form-control" formControlName="state">
+        <label for="State">State:</label>
+        <input type="text" class="form-control" formControlName="State" id="State">
       </div>
-      <button class="btn btn-primary" type="submit">Submit</button>
+      <div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button (click)="LoadApi" class=" btn-primary">LoadApiData</button>
+      </div>
     </div>
   </form>
-  {{registrationForm.value | json}}
-  </div>
