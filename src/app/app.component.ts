@@ -5,22 +5,26 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  LoadApi():void
-{  alert('LoadApi');}
+export class AppComponent implements OnInit 
+{
+  LoadApi():void { 
+     alert('LoadApi');
+    }
+
   registrationForm: FormGroup;
-  constructor(private fb: FormBuilder,address:FormGroup) {
+  address:FormGroup;
+  constructor(private fb: FormBuilder) {
     this.registrationForm = new FormGroup({
       UserName: new FormControl('Beni the king'),
       Password: new FormControl('123'),
       ConfirmPassword: new FormControl('123')
     }),
-      address = new FormGroup({
+      this.address = new FormGroup({
         City: new FormControl('Los angeles'),
         State: new FormControl('California')
       })
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // alert('Method not implemented.');
   }
 }
